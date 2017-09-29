@@ -1,6 +1,7 @@
 # Sentry/Raven SQS Proxy
 
 [![Build Status](https://travis-ci.org/Netflix-Skunkworks/raven-sqs-proxy.svg?branch=master)](https://travis-ci.org/Netflix-Skunkworks/raven-sqs-proxy)
+[![PyPI version](https://badge.fury.io/py/raven-sqs-proxy.svg)](https://badge.fury.io/py/raven-sqs-proxy)
 
 ## About
 This is a very simple Python project that polls SQS for Sentry messages and then proxies them over to a Sentry instance.
@@ -49,8 +50,11 @@ For retrieving messages:
 
 
 ## Installation:
-1. `pip` install this
-1. Make a Python 3 virtual environment
-1. Run `sqsproxy` with the required parameters
+1. Make and activate a Python virtual environment
+1. Run `pip install raven_sqs_proxy` to install this
+1. Hopefully you are running with on-instance AWS IAM role credentials. Otherwise, you will
+   need to export them into your environment.
+1. Run `sqsproxy --queue-name NAME-OF-QUEUE --queue-region QUEUE-REGION --queue-account AWS_ACCOUNT_ID_OF_QUEUE`
+
 
 That's it.
